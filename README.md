@@ -1,29 +1,34 @@
 # Moreesc
 
-I. Installation
+# I. Installation
     Dependancies :
-    - python (>=2.5)
-    - numpy (>1.0)
-    - scipy (>0.7)
-    - matplotlib (>1.0)
-    - a C compiler
-    Optional :
-    - scikits.audiolab (in order to save wav files)
-    - cython (>=0.15)
-    - aubio (for audio analysis)
-    - h5py (for storing results in HDF5 format instead of pickle binary format)
+- python (>=2.5)
+- numpy (>1.0)
+- scipy (>0.7)
+- matplotlib (>1.0)
+- a C compiler
+
+Optional :
+- scikits.audiolab (in order to save wav files)
+- cython (>=0.15)
+- aubio (for audio analysis)
+- h5py (for storing results in HDF5 format instead of pickle binary format)
     
-    One requirements are ready:
-    - extract files from the archive
-    - run the following commands in a terminal from the same folder 
-      as setup.py and README:
-      $ python setup.py build
-      $ python setup.py install
-      The last command may require root permissions, otherwise use the prefix:
-      $ python setup.py install --prefix=/usr/local/
+One requirements are ready:
+- extract files from the archive
+- run the following commands in a terminal from the same folder as setup.py and README:
 
-II. Minimal example
+```
+$ python setup.py build
+$ python setup.py install
+The last command may require root permissions, otherwise use the prefix:
+$ python setup.py install --prefix=/usr/local/
+```
 
+# II. Minimal example
+
+
+```
 import sys
 # Tell python where to find moreesc (if non-standard path)
 sys.path.append('/your/path/to/the/folder/containing/the/moreesc/folder')
@@ -55,3 +60,23 @@ sim.integrate(t=tsim)
 sim.save('/tmp/test.h5')
 sim.save_wav('/tmp/test.wav', where='in')
 sim.trace(trace_all=True)
+```
+
+# Notas
+
+```
+sudo apt install python3.8-distutils
+sudo apt install pip
+sudo python3 -m pip install numpy
+sudo python3 -m pip install scipy
+sudo python3 -m pip install Cython
+sudo python3 -m pip install matplotlib
+sudo python3 -m pip install aubio
+```
+
+## instalar o pacote moreesc e compilar os pacotes cython
+
+
+```
+python3 setup.py build_ext --inplace
+```
