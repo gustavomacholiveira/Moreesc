@@ -1,7 +1,0 @@
-Notes : 
-* la simu test donne des oscillations à 20Hz. C'est (encore) à cause
-  de l'ouverture donnée en aire et pas hauteur.
-  Si dans le cas hauteur, on a h0 = .3mm et kr = 8e6Pa/m = 8kPa/mm
-  pour une ouverture en aire (largeur de 1cm par exemple), on a S0 = 3e-6mm^2 et Kr = 8e8 Pa/m^2
-  
-  Rappel: en statique Delta p = kr * h0 = Kr * S0
